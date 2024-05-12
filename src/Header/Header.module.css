@@ -1,0 +1,12 @@
+section {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: bisque;
+}
+
+.img_carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}

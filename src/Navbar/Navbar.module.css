@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+.Navbar{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Syncopate', sans-serif;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    list-style: none;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media (min-width: 768px) {
+    .Navbar {
+        font-size: 15px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .Navbar {
+        font-size: 25px;
+    }
+}

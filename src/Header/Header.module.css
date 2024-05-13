@@ -1,12 +1,64 @@
-section {
-  display: grid;
-  place-content: center;
-  height: 100vh;
-  background-color: bisque;
+@font-face {
+    font-family: 'Saint Regular';
+    src: url('../../public/Saint Regular.ttf');
+}
+@font-face {
+    font-family: 'Queering-Bold';
+    src: url('../../public/ttf/Queering-Bold.ttf');
+}
+@font-face {
+    font-family: 'Queering-Heavy';
+    src: url('../../public/ttf/Queering-Heavy.ttf');
+}
+@font-face {
+    font-family: 'Queering-Medium';
+    src: url('../../public/ttf/Queering-Medium.ttf');
+}
+@font-face {
+    font-family: 'Queering-Regular';
+    src: url('../../public/ttf/Queering-Regular.ttf');
+}
+@font-face {
+    font-family: 'Queering-Semibold';
+    src: url('../../public/ttf/Queering-Semibold.ttf');
+}
+@font-face {
+    font-family: 'milkman-font';
+    src: url('../../public/milkman.ttf');
 }
 
-.img_carousel {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 3rem; */
+    text-align: center;
+    height: 100vh;
+    color: white;
+    background-image: url('../../public/blackPaper.jpg');
+    background-size: cover;
+}
+
+.Font1 {
+    font-family: 'milkman-font', sans-serif;
+    font-size: 10rem;
+}
+.Font2 {
+    font-family: 'milkman-font', sans-serif;
+    font-size: 10rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .Container {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Container {
+        font-size: 18rem;
+    }
 }

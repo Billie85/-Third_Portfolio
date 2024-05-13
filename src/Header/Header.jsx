@@ -1,44 +1,36 @@
-import styles from './Header.module.css';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect, useRef } from 'react';
-
-gsap.registerPlugin(ScrollTrigger);
+import gsap from 'gsap';
+import styles from './Header.module.css';
 
 export default function Header() {
+    const welcomeRef = useRef(null);
+    const portfolioRef = useRef(null);
 
-  const img_carousel = useRef(null);
+    useEffect(() => {
+        const welcome = welcomeRef.current;
+        const portfolio = portfolioRef.current;
 
-  useEffect(() => {
-    let cont = img_carousel.current;
-    gsap.to("img", {
-      ease: "none",
-      x: () => -(cont.scrollWidth - window.innerWidth),
-      scrollTrigger: {
-        trigger: cont,
-        pin: cont,
-        start: "center center",
-        end: () => "+=" + (cont.scrollWidth - window.innerWidth),
-        scrub: true,
-        invalidateOnRefresh: true,
-        markers: true,
-      }
-    })
-  }, [])
+        gsap.from(welcome, {
+            y: 100,
+            opacity: 0,
+            ease: "power1.inOut",
+            duration: 1.3,
+            delay: 1.2,
+        });
 
-  return (
-    <>
-    <section></section>
-    <div className={styles.img_carousel} ref={img_carousel}>
-      <img src="https://placehold.co/600x400" alt="" />
-      <img src="https://placehold.co/600x400" alt="" />
-      <img src="https://placehold.co/600x400" alt="" />
-      <img src="https://placehold.co/600x400" alt="" />
-      <img src="https://placehold.co/600x400" alt="" />
-    </div>
-    <section></section>
-    <section></section>
+        gsap.from(portfolio, {
+            y: 100,
+            opacity: 0,
+            ease: "power1.inOut",
+            duration: 1.3,
+            delay: 2,
+        });
+    }, []);
 
-    </>
-  );
+    return (
+        <div className={styles.Container}>
+            <div className={styles.Font1} ref={welcomeRef}>Welcome</div>
+            <div className={styles.Font2} ref={portfolioRef}>My Portfolio</div>
+        </div>
+    );
 }

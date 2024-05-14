@@ -28,9 +28,11 @@ export default function Header() {
     }, []);
 
     return (
+        <>
         <div className={styles.Container}>
             <div className={styles.Font1} ref={welcomeRef}>Welcome</div>
             <div className={styles.Font2} ref={portfolioRef}>My Portfolio</div>
         </div>
+        </>
     );
 }

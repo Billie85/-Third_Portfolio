@@ -3,36 +3,29 @@ import gsap from 'gsap';
 import styles from './Header.module.css';
 
 export default function Header() {
-    const welcomeRef = useRef(null);
-    const portfolioRef = useRef(null);
-
     useEffect(() => {
-        const welcome = welcomeRef.current;
-        const portfolio = portfolioRef.current;
+        const circle = document.querySelectorAll(`.${styles.circle}`);
+        document.addEventListener("mousemove", (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
 
-        gsap.from(welcome, {
-            y: 100,
-            opacity: 0,
-            ease: "power1.inOut",
-            duration: 1.3,
-            delay: 1.2,
-        });
-
-        gsap.from(portfolio, {
-            y: 100,
-            opacity: 0,
-            ease: "power1.inOut",
-            duration: 1.3,
-            delay: 2,
-        });
-    }, []);
-
-    return (
-        <>
-        <div className={styles.Container}>
-            <div className={styles.Font1} ref={welcomeRef}>Welcome</div>
-            <div className={styles.Font2} ref={portfolioRef}>My Portfolio</div>
+            gsap.to(circle, {
+                x: mouseX, 
+                y: mouseY,
+                stagger: 0.1
+            })
+        })
+    }, [])
+  return (
+      <div className={styles.Container}>
+        <div className={styles.circle}></div>
+        <div className={styles.circle}></div>
+        <div className={styles.circle}></div>
+        <div className={styles.circle}></div>
+        <div className={styles.circle}></div>
+        <div className={`${styles.last} ${styles.circle}`}>
+            <h1>Move Your Mouse</h1>
         </div>
-        </>
-    );
+    </div>
+  );
 }

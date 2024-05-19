@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    font-size: 5px;
+    font-size: 10px;
     letter-spacing: 1px;
     font-family: 'Syncopate', sans-serif;
     color: white;
@@ -19,7 +19,7 @@
 
 @media (min-width: 768px) {
     .Navbar {
-        font-size: 5px; 
+        font-size: 10px; 
     }
 }
 

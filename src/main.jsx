@@ -8,7 +8,6 @@ import SecondHeader from './SecondHeader/SecondHeader.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
-        {/* <Navbar/> */}
         <SecondHeader/>
         <About/>
         <Header/>

@@ -2,8 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './Header.module.css';
 import { gsap } from 'gsap';
 
-const MenuItem = ({ title, event , isVisible}) => {
-
+// onClick = eventの事
+const Menu_Bar = ({ title, ClickHandler, isVisible, mouseHandler, mouseLeaveHandle}) => {
+    
     useEffect(() => {
         const wrappers = document.querySelectorAll(`.${styles.Wrapper}`);
         if (isVisible) {
@@ -17,10 +18,12 @@ const MenuItem = ({ title, event , isVisible}) => {
         }
     }, [isVisible]);
 
+
+{/* menu barはたくさんあるもの */}
     return (
-        <div className={styles.MenuItem}>
-            <span className={styles.MenuItemText} onClick={event}>
-                <span className={styles.InnerText}>{title}</span>
+        <div onMouseOver={mouseHandler} onMouseLeave={mouseLeaveHandle}>
+            <span className={styles.MenuItemText} onClick={ClickHandler}>
+                <span>{title}</span>
             </span>
         </div>
     );
@@ -28,13 +31,21 @@ const MenuItem = ({ title, event , isVisible}) => {
 
 export default function Header() {
     const [isVisible, setVisible] = useState(-1);
+    const [isImageVisible, setImageVisible] = useState(-1);
 
     const handleCloseButtonClick = () => {
         setVisible(-1);
     };
+
+    // 要相談
+    const handleMouseOut  = () => {
+        setImageVisible(-1);
+    }
+
     const menuItems = [
         {
             title: 'Education',
+            img: '../../public/42Tokyo1.jpg',
             content: (
                 <>
                     <h1>Education</h1>
@@ -50,6 +61,7 @@ export default function Header() {
         },
         {
             title: 'Skills',
+            img: '../../public/MyPicture2.png',
             content: (
                 <>
                     <h1>Skills</h1>
@@ -68,12 +80,13 @@ export default function Header() {
         },
         {
             title: 'Experience',
+            img: '../../public/42tokyo2.jpg',
             content: (
                 <>
                     <h1>Experience</h1>
                     <h2>42tokyoにおける<br />チームプロジェクト</h2>
                     <p>フロントエンド開発とデザインにおいて<br />
-                    JavaScript、React、HTML、CSS、Figmaを活用</p>
+                        JavaScript、React、HTML、CSS、Figmaを活用</p>
                     <p>Linuxシステム管理技術を実践したインフラ構築</p>
                     <p>Dockerを用いたコンテナ化による効率的なデプロイメントの実現</p>
                 </>
@@ -81,12 +94,13 @@ export default function Header() {
         },
         {
             title: '42Tokyo',
+            img: '../../public/42tokyo4.jpg',
             content: (
                 <>
                     <h1>42Tokyo</h1>
                     <h2>42tokyoにおける<br />チームプロジェクト</h2>
                     <p>フロントエンド開発とデザインにおいて<br />
-                    JavaScript、React、HTML、CSS、Figmaを活用</p>
+                        JavaScript、React、HTML、CSS、Figmaを活用</p>
                     <p>Linuxシステム管理技術を実践したインフラ構築</p>
                     <p>Dockerを用いたコンテナ化による効率的なデプロイメントの実現</p>
                 </>
@@ -94,12 +108,13 @@ export default function Header() {
         },
         {
             title: 'AboutMe',
+            img: '../../public/MyPicture4.jpg',
             content: (
                 <>
                     <h1>AboutMe</h1>
                     <h2>42tokyoにおける<br />チームプロジェクト</h2>
                     <p>フロントエンド開発とデザインにおいて<br />
-                    JavaScript、React、HTML、CSS、Figmaを活用</p>
+                        JavaScript、React、HTML、CSS、Figmaを活用</p>
                     <p>Linuxシステム管理技術を実践したインフラ構築</p>
                     <p>Dockerを用いたコンテナ化による効率的なデプロイメントの実現</p>
                 </>
@@ -107,12 +122,13 @@ export default function Header() {
         },
         {
             title: 'Test1',
+            img: '../../public/MyPicture3.png',
             content: (
                 <>
                     <h1>Test1</h1>
                     <h2>42tokyoにおける<br />チームプロジェクト</h2>
                     <p>フロントエンド開発とデザインにおいて<br />
-                    JavaScript、React、HTML、CSS、Figmaを活用</p>
+                        JavaScript、React、HTML、CSS、Figmaを活用</p>
                     <p>Linuxシステム管理技術を実践したインフラ構築</p>
                     <p>Dockerを用いたコンテナ化による効率的なデプロイメントの実現</p>
                 </>
@@ -120,12 +136,13 @@ export default function Header() {
         },
         {
             title: 'Test2',
+            img: '../../public/42tokyo3.jpg',
             content: (
                 <>
                     <h1>Test2</h1>
                     <h2>42tokyoにおける<br />チームプロジェクト</h2>
                     <p>フロントエンド開発とデザインにおいて<br />
-                    JavaScript、React、HTML、CSS、Figmaを活用</p>
+                        JavaScript、React、HTML、CSS、Figmaを活用</p>
                     <p>Linuxシステム管理技術を実践したインフラ構築</p>
                     <p>Dockerを用いたコンテナ化による効率的なデプロイメントの実現</p>
                 </>
@@ -133,12 +150,13 @@ export default function Header() {
         },
         {
             title: 'Test3',
+            img: '../../public/MyPicture1.jpg',
             content: (
                 <>
                     <h1>Test3</h1>
                     <h2>42tokyoにおける<br />チームプロジェクト</h2>
                     <p>フロントエンド開発とデザインにおいて<br />
-                    JavaScript、React、HTML、CSS、Figmaを活用</p>
+                        JavaScript、React、HTML、CSS、Figmaを活用</p>
                     <p>Linuxシステム管理技術を実践したインフラ構築</p>
                     <p>Dockerを用いたコンテナ化による効率的なデプロイメントの実現</p>
                 </>
@@ -146,44 +164,37 @@ export default function Header() {
         }
     ];
 
-    // -1だったら何も選択してない。
-    return (
-        <div className={styles.container}>
-                {menuItems.map((item, index) => (
-                    <MenuItem event={() => {setVisible(index)}} key={index} title={item.title} isVisible={isVisible >= 0}/>
-                ))}
-                <div className={`${styles.Wrapper} ${isVisible >= 0 ? styles.visible : styles.hidden}`}>
-                    <div className={styles.Box}>
-                        <button className={styles.CloseButton} onClick={handleCloseButtonClick}>&times;</button>
-                        {isVisible >= 0 && menuItems[isVisible].content}
-                    </div>
+// -1だったら何も選択してない。
+{/* itemの中身はtitleから<h1>~<p>まで入ってる */}
+{/* index -> 0 1 2 3  これらの情報をMenu_barに渡す*/}
+return (
+    <div className={styles.container}>
+            {menuItems.map((item, index) => (
+                <Menu_Bar 
+                ClickHandler={() => {setVisible(index)}}
+                mouseHandler ={() => {setImageVisible(index);}}
+                mouseLeaveHandle={handleMouseOut}
+                key={index}
+                title={item.title}
+                isVisible={isVisible >= 0}
+                isImageVisible={isImageVisible >= 0  
+                } //gsap用
+                />
+            ))}
+
+{/* 1つだけのもの */}
+            <div className={`${styles.Wrapper} ${isVisible >= 0 ? styles.visible : styles.hidden}`}>
+                <div className={styles.Box}>
+                    <button className={styles.CloseButton} onClick={handleCloseButtonClick}>&times;</button>
+                    {isVisible >= 0 && menuItems[isVisible].content}
                 </div>
-        </div>
-    );
+            </div>
+
+            <div className={`${styles.ImageWrapper} ${isImageVisible >= 0 ? styles.ImgVisible : styles.ImgHidden}`}>
+                <div className={styles.ImgBox}>
+                    {isImageVisible >= 0 && <img className={styles.imgDesign} src={menuItems[isImageVisible].img} alt={menuItems[isImageVisible].title}/>}
+                </div>
+            </div>
+    </div>
+);
 }
-
-
-   // useEffect(() => {
-    //     const circle = document.querySelectorAll(`.${styles.circle}`);
-    //     document.addEventListener("mousemove", (e) => {
-    //         const mouseX = e.clientX;
-    //         const mouseY = e.clientY;
-
-    //         gsap.to(circle, {
-    //             x: mouseX, 
-    //             y: mouseY,
-    //             stagger: 0.1
-    //         })
-    //     })
-    // }, [])
-
-// <div className={styles.Container}>
-//     <div className={styles.circle}></div>
-//     <div className={styles.circle}></div>
-//     <div className={styles.circle}></div>
-//     <div className={styles.circle}></div>
-//     <div className={styles.circle}></div>
-//     <div className={`${styles.last} ${styles.circle}`}>
-//         <h1>Move Your Mouse</h1>
-//     </div>
-// </div>

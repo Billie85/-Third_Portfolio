@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './Header.module.css';
 import { gsap } from 'gsap';
 
-// onClick = eventの事
-const Menu_Bar = ({ title, ClickHandler, isVisible, mouseHandler, mouseLeaveHandle}) => {
+const Menu_Bar = ({ title, ClickHandler, isVisible}) => {
     
     useEffect(() => {
         const wrappers = document.querySelectorAll(`.${styles.Wrapper}`);
@@ -21,7 +20,7 @@ const Menu_Bar = ({ title, ClickHandler, isVisible, mouseHandler, mouseLeaveHand
 
 {/* menu barはたくさんあるもの */}
     return (
-        <div onMouseOver={mouseHandler} onMouseLeave={mouseLeaveHandle}>
+        <div className={styles.Text}>
             <span className={styles.MenuItemText} onClick={ClickHandler}>
                 <span>{title}</span>
             </span>
@@ -31,21 +30,15 @@ const Menu_Bar = ({ title, ClickHandler, isVisible, mouseHandler, mouseLeaveHand
 
 export default function Header() {
     const [isVisible, setVisible] = useState(-1);
-    const [isImageVisible, setImageVisible] = useState(-1);
+    const imgRef = useRef(null);
 
     const handleCloseButtonClick = () => {
         setVisible(-1);
     };
 
-    // 要相談
-    const handleMouseOut  = () => {
-        setImageVisible(-1);
-    }
-
     const menuItems = [
         {
             title: 'Education',
-            img: '../../public/42Tokyo1.jpg',
             content: (
                 <>
                     <h1>Education</h1>
@@ -61,7 +54,6 @@ export default function Header() {
         },
         {
             title: 'Skills',
-            img: '../../public/MyPicture2.png',
             content: (
                 <>
                     <h1>Skills</h1>
@@ -80,7 +72,6 @@ export default function Header() {
         },
         {
             title: 'Experience',
-            img: '../../public/42tokyo2.jpg',
             content: (
                 <>
                     <h1>Experience</h1>
@@ -94,7 +85,6 @@ export default function Header() {
         },
         {
             title: '42Tokyo',
-            img: '../../public/42tokyo4.jpg',
             content: (
                 <>
                     <h1>42Tokyo</h1>
@@ -108,7 +98,6 @@ export default function Header() {
         },
         {
             title: 'AboutMe',
-            img: '../../public/MyPicture4.jpg',
             content: (
                 <>
                     <h1>AboutMe</h1>
@@ -122,7 +111,6 @@ export default function Header() {
         },
         {
             title: 'Test1',
-            img: '../../public/MyPicture3.png',
             content: (
                 <>
                     <h1>Test1</h1>
@@ -136,7 +124,6 @@ export default function Header() {
         },
         {
             title: 'Test2',
-            img: '../../public/42tokyo3.jpg',
             content: (
                 <>
                     <h1>Test2</h1>
@@ -150,7 +137,6 @@ export default function Header() {
         },
         {
             title: 'Test3',
-            img: '../../public/MyPicture1.jpg',
             content: (
                 <>
                     <h1>Test3</h1>
@@ -172,13 +158,9 @@ return (
             {menuItems.map((item, index) => (
                 <Menu_Bar 
                 ClickHandler={() => {setVisible(index)}}
-                mouseHandler ={() => {setImageVisible(index);}}
-                mouseLeaveHandle={handleMouseOut}
                 key={index}
                 title={item.title}
-                isVisible={isVisible >= 0}
-                isImageVisible={isImageVisible >= 0  
-                } //gsap用
+                isVisible={isVisible >= 0} //gsap用
                 />
             ))}
 
@@ -187,12 +169,6 @@ return (
                 <div className={styles.Box}>
                     <button className={styles.CloseButton} onClick={handleCloseButtonClick}>&times;</button>
                     {isVisible >= 0 && menuItems[isVisible].content}
-                </div>
-            </div>
-
-            <div className={`${styles.ImageWrapper} ${isImageVisible >= 0 ? styles.ImgVisible : styles.ImgHidden}`}>
-                <div className={styles.ImgBox}>
-                    {isImageVisible >= 0 && <img className={styles.imgDesign} src={menuItems[isImageVisible].img} alt={menuItems[isImageVisible].title}/>}
                 </div>
             </div>
     </div>

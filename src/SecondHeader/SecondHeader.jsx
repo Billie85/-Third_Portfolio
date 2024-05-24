@@ -1,5 +1,4 @@
 import React from 'react';
-import gsap from 'gsap';
 import styles from './SecondHeader.module.css';
 import gifImage from '../../public/twoBand.mp4';
 

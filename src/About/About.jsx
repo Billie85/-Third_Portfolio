@@ -20,7 +20,8 @@ export default function About() {
       scrollTrigger: {
         trigger: cont,
         start: 'top top',
-        end: () => `+=${totalWidth - window.innerWidth}`,
+        // markers: true,
+        end: () => `+=${totalWidth - window.innerWidth + 800}`,
         scrub: 1,
         pin: true,
         invalidateOnRefresh: true,
@@ -81,7 +82,7 @@ export default function About() {
         </div>
 
         <div className={`${styles.NameContainer} ${styles.box}`}>
-          <h1 className={styles.NameFont} ref={FontRef}>Ayumi Kimura Angelinne</h1>
+          <h1 className={styles.NameFont} ref={FontRef}>Ayumi Kimura</h1>
         </div>
         <div className={`${styles.AboutContainer} ${styles.box}`}>
           <h1 className={styles.AboutFont} ref={AboutMe}>* About ME About ME About ME *</h1>
@@ -120,7 +121,7 @@ export default function About() {
           </div>
         </div>
         <div className={`${styles.HelloContainer} ${styles.box}`}>
-          <h1 className={styles.HelloFont} >!HELLO!</h1>
+          <h1 className={styles.HelloFont} >&#9756;</h1>
         </div>
       </div>
     </>

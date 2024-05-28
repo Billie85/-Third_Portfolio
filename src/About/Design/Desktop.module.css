@@ -1,0 +1,97 @@
+.container {
+    color: whitesmoke;
+    position: relative;
+    height: 100vh;
+    width: 150vw;
+    top: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7,  1fr);
+    /* background-color: rgb(255, 42, 0); */
+  }
+  
+  .MyPictureContainer {
+    grid-row: 1 / 4;
+    grid-column: 1 / 3;
+    backdrop-filter: blur(13px);
+    border: 1px solid #000;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .MyImg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .NameContainer {
+    grid-row: 1 / 3;
+    grid-column: 3 / 11;
+    backdrop-filter: blur(13px);
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(0, 255, 17); */
+  }
+  .NameFont{
+    font-size: 4rem;
+    font-family: Syne;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+  }
+
+  .hogeContainer{
+    grid-row: 3 / 4;
+    grid-column: 3 / 11;
+    backdrop-filter: blur(13px);
+  }
+  
+  .IntroduceContainer {
+    grid-row: 4 / 8;
+    grid-column: 1 / 11;
+    backdrop-filter: blur(13px);
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(255, 119, 119); */
+  }
+  .box{
+    margin: 10px;
+    text-align: left;
+    font-size: 1.4vw;
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .TextDesign{
+    font-size: 1.4vw;
+  }
+  
+  .ArrowContainer {
+    grid-row: 1 / 8;
+    grid-column: 11 / 13;
+    backdrop-filter: blur(13px);
+    /* background-color: rgb(255, 179, 0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .ArrowFont{
+    font-size: 6rem;
+  }

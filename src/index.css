@@ -1,4 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: thin; /* "auto" または "thin" */
+  scrollbar-color: #000000 #252525; /* スクロールバーの色 背景色 */
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }

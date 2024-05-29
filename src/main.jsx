@@ -4,7 +4,9 @@ import './index.css';
 import Header from './Header/Header.jsx';
 import About from './About/About.jsx';
 import SecondHeader from './SecondHeader/SecondHeader.jsx';
+import Contact from './Contact/Contact.jsx';
 import Gif from '../public/gif.webp'
+import Cursor from './CursorPointer/Cursor.jsx';
 
 const App = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -20,16 +22,18 @@ const App = () => {
     console.log(windowWidth, ": display none");
     return (
       <div>
-        <img src="/gif.webp" alt="Gif" />
+        <img src={Gif} alt="Gif" />
     </div>
     );
   }
 
   return (
     <>
+      <Cursor/>
       <SecondHeader />
       <About />
       <Header />
+      <Contact />
     </>
   );
 };

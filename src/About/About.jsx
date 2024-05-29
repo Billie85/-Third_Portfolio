@@ -1,6 +1,5 @@
 import Mobile from './Design/Mobile.module.css';
 import Desktop from './Design/Desktop.module.css';
-
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect, useRef, useState  } from 'react';
@@ -24,7 +23,6 @@ export default function About() {
       scrollTrigger: {
         trigger: cont,
         start: 'top top',
-        markers: true,
         end: () => `+=${totalWidth - window.innerWidth + 800}`,
         scrub: 1,
         pin: true,

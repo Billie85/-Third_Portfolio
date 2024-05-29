@@ -38,28 +38,10 @@ const Menu_Bar = ({ title, ClickHandler}) => {
 
 export default function Header() {
 
-    // mouse Animation
     const [isVisible, setVisible] = useState(-1);
     const handleCloseButtonClick = () => {
         setVisible(-1);
     };
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-          const mouseX = e.clientX;
-          const mouseY = e.clientY;
-          const circles = document.querySelectorAll(`.${styles.circle}`);
-          
-          gsap.to(circles, {
-              x: mouseX,
-              y: mouseY,
-              stagger: 0.1
-            });
-        };
-        document.addEventListener('mousemove', handleMouseMove);
-        return () => {
-          document.removeEventListener('mousemove', handleMouseMove);
-        };
-      }, []);
 
     //   Box Animation
       const BoxRef = useRef(null);
@@ -143,9 +125,6 @@ export default function Header() {
 
     return (
         <div className={styles.container}>
-            <div className={`${styles.circle} ${styles.circle1}`}></div>
-            <div className={`${styles.circle} ${styles.circle2}`}></div>
-            <div className={`${styles.circle} ${styles.circle3}`}></div>
             {menuItems.map((item, index) => (
                 <Menu_Bar
                     ClickHandler={() => { setVisible(index) }}

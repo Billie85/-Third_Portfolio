@@ -85,7 +85,7 @@ export default function Header() {
                  </div>
 
                 <div className={styles.flexBox2}>
-                    <img src='../../public/42Tokyo1.jpg' alt=''/>
+                    <img src='/42Tokyo1.jpg' alt=''/>
                 </div>
                 </>
             )
@@ -112,7 +112,7 @@ export default function Header() {
                     </div>
 
                     <div className={styles.flexBox2}>
-                            <img src='../../public/logo.png' alt=''/>
+                            <img src='/logo.png' alt=''/>
                     </div>
                 </>
             )
@@ -133,7 +133,7 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className={styles.flexBox2}>
-                    <img src='../../public/MyPicture2.png' alt=''/>
+                    <img src='/MyPicture2.png' alt=''/>
                 </div>
                 </>
             )

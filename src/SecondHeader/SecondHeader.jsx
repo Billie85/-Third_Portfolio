@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SecondHeader.module.css';
-import gifImage from '../../public/twoBand.mp4';
+import gifImage from '/twoBand.mp4';
 
 export default function SecondHeader() {
   return (

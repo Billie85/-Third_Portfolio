@@ -5,7 +5,7 @@ import Header from './Header/Header.jsx';
 import About from './About/About.jsx';
 import SecondHeader from './SecondHeader/SecondHeader.jsx';
 import Contact from './Contact/Contact.jsx';
-import Gif from '../public/gif.webp'
+import Gif from '/gif.webp'
 import Cursor from './CursorPointer/Cursor.jsx';
 
 const App = () => {

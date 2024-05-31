@@ -50,7 +50,7 @@ export default function About() {
       <div className={Mobile.container}>
         <div className={Mobile.MyPictureContainer}>
           <div className={Mobile.img}>
-            <img className={Mobile.MyImg} alt="" src="../../public/MyPicture.png" />
+            <img className={Mobile.MyImg} alt="" src="/MyPicture.png" />
           </div>
         </div>
 
@@ -105,7 +105,7 @@ export default function About() {
       <div className={Desktop.container} ref={ScrollAnimation}>
         <div className={Desktop.MyPictureContainer}>
           <div className={Desktop.img}>
-            <img className={Desktop.MyImg} alt="" src="../../public/MyPicture.png" />
+            <img className={Desktop.MyImg} alt="" src="/MyPicture.png" />
           </div>
         </div>
 

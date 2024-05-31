@@ -41,10 +41,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    white-space: nowrap;
   }
   .NameFont{
-    margin: 6px;
-    font-size: 2.2rem;
+    margin: 2%;
+    font-size: 4vw;
     font-family: Syne;
     text-transform: uppercase;
     font-weight: 800;
@@ -62,22 +63,12 @@
   }
   .box{
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 2vw;
     font-family: "Zen Old Mincho", serif;
     font-weight: 400;
     font-style: normal;
-    margin: 6px;
+    margin: 5px;
   }
   .TextDesign{
-    font-size: 1rem;
-  }
-  
-  .ArrowContainer {
-    flex: 0.5;
-    display: flex;
-    justify-content: center;
-    backdrop-filter: blur(13px);
-  }
-  .ArrowFont{
-    font-size: 6vw;
+    font-size: 2.4vw;
   }

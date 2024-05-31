@@ -183,9 +183,19 @@
         flex-direction: column;
         border: 1px solid #ffffff;
         background-color: black;
-        width: 60vw;
-        height: 80vh;
+        width: 65vw;
+        height: auto;
         padding: 3vw;
+    }
+    .flexBox1{
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
 
     .flexBox1 h1{
@@ -207,6 +217,23 @@
         align-items: left;
          font-family: "Zen Old Mincho", serif;
         font-style: normal;
+    }
+
+    .flexBox2{
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .flexBox2 img {
+        padding: 3%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
     }
 
     .CloseButton {

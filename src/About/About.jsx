@@ -92,10 +92,6 @@ export default function About() {
             </p>
           </div>
         </div>
-
-        <div className={Mobile.ArrowContainer}>
-          <h1 className={Mobile.ArrowFont} >&#9759;</h1>
-        </div>
       </div>
     )
   } 

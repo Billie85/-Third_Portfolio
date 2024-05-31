@@ -105,10 +105,11 @@
         width: 100%;
     }
     .contactText h1{
+        margin-bottom: 5%;
         font-family: 'Syne';
         font-weight: 800;
         text-transform: uppercase;
-        font-size: 6vh;
+        font-size: 9vh;
         width: 100%;
         text-align: center;
     }

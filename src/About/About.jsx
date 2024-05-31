@@ -3,6 +3,8 @@ import Desktop from './Design/Desktop.module.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect, useRef, useState  } from 'react';
+import MyPicture from '/MyPicture.png';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,7 +52,7 @@ export default function About() {
       <div className={Mobile.container}>
         <div className={Mobile.MyPictureContainer}>
           <div className={Mobile.img}>
-            <img className={Mobile.MyImg} alt="" src="/MyPicture.png" />
+            <img className={Mobile.MyImg} alt="" src={MyPicture} />
           </div>
         </div>
 
@@ -105,7 +107,7 @@ export default function About() {
       <div className={Desktop.container} ref={ScrollAnimation}>
         <div className={Desktop.MyPictureContainer}>
           <div className={Desktop.img}>
-            <img className={Desktop.MyImg} alt="" src="/MyPicture.png" />
+            <img className={Desktop.MyImg} alt="" src={MyPicture} />
           </div>
         </div>
 

@@ -2,7 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './Header.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import EducationImg from '/42Tokyo1.jpg'
+import SkillImg from '/logo.png'
+import ExperienceImg from '/MyPicture2.png'
+import ProjectImg from '/video.mp4'
 gsap.registerPlugin(ScrollTrigger);
 
 const Menu_Bar = ({ title, ClickHandler }) => {
@@ -85,7 +88,7 @@ export default function Header() {
                  </div>
 
                 <div className={styles.flexBox2}>
-                    <img src='/42Tokyo1.jpg' alt=''/>
+                    <img src={EducationImg} alt=''/>
                 </div>
                 </>
             )
@@ -112,7 +115,7 @@ export default function Header() {
                     </div>
 
                     <div className={styles.flexBox2}>
-                            <img src='/logo.png' alt=''/>
+                            <img src={SkillImg} alt=''/>
                     </div>
                 </>
             )
@@ -133,7 +136,7 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className={styles.flexBox2}>
-                    <img src='/MyPicture2.png' alt=''/>
+                    <img src={ExperienceImg} alt=''/>
                 </div>
                 </>
             )
@@ -144,7 +147,7 @@ export default function Header() {
                 <>
                 <div className={styles.flexBox2}>
                     <video controls className={styles.video}>
-                        <source src='/video.mp4' type='video/mp4' />
+                        <source src={ProjectImg} type='video/mp4' />
                     </video>
                 </div>
                 </>

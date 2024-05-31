@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Menu_Bar = ({ title, ClickHandler}) => {
+const Menu_Bar = ({ title, ClickHandler }) => {
 
     // Title Animation
     const titleRef = useRef(null);
@@ -13,7 +13,7 @@ const Menu_Bar = ({ title, ClickHandler}) => {
         if (titleRef.current) {
             gsap.fromTo(
                 titleRef.current,
-                { opacity: 0},
+                { opacity: 0 },
                 {
                     opacity: 1,
                     ease: 'power2.out',
@@ -44,24 +44,24 @@ export default function Header() {
     };
 
     //   Box Animation
-      const BoxRef = useRef(null);
-      useEffect(() => {
+    const BoxRef = useRef(null);
+    useEffect(() => {
         if (BoxRef.current && isVisible >= 0) {
-          gsap.fromTo(
-            BoxRef.current,
-            {
-                opacity: 0,
-                scale: 0.5,
-                y: 100,
-            },
-            {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-                ease: "circ.inOut",
-                duration: 0.8,
-            }
-          );
+            gsap.fromTo(
+                BoxRef.current,
+                {
+                    opacity: 0,
+                    scale: 0.5,
+                    y: 100,
+                },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                    ease: "circ.inOut",
+                    duration: 0.8,
+                }
+            );
         }
     }, [isVisible]);
 
@@ -69,10 +69,11 @@ export default function Header() {
         {
             // Education
             title: 'Education',
-            content_right: (
+            CenterText: (
                 <>
+                 <div className={styles.flexBox1}>
                     <h1>Education</h1>
-                    <h2>42tokyo エンジニアリングスクール<br />2年半在籍</h2>
+                    <h2>42tokyo エンジニアリングスクール2年半在籍</h2>
                     <ul>
                         <li>C言語を中心としたプログラミング学習</li>
                         <li>コンピュータグラフィックアルゴリズムの理解と実践</li>
@@ -81,43 +82,71 @@ export default function Header() {
                         <li>Dockerを用いたコンテナ管理のスキル取得</li>
                         <li>チームweb開発を通じてフロントエンドデザインの習得</li>
                     </ul>
+                 </div>
+
+                <div className={styles.flexBox2}>
+                    <img src='../../public/42Tokyo1.jpg' alt=''/>
+                </div>
                 </>
             )
         },
         {
             // Skill
             title: 'Skills',
-            content_right: (
+            CenterText: (
                 <>
-                    <h1>Skills</h1>
-                    <h2>エンジニアリング</h2>
-                    <ul>
-                        <li>プログラミング言語: C C++ JavaScript</li>
-                        <li>フレームワーク: React</li>
-                        <li>マークアップ言語: HTML CSS</li>
-                        <li>デザインツール: Figma</li>
-                        <li>システム管理: Docker Linux</li>
-                        <h2>その他</h2>
-                        <li>日本語 ネイティブ</li>
-                        <li>ポルトガル語 ネイティブレベル</li>
-                        <li>英語 ビジネスレベル</li>
-                    </ul>
+                    <div className={styles.flexBox1}>
+                        <h1>Skills</h1>
+                        <h2>エンジニアリング</h2>
+                        <ul>
+                            <li>プログラミング言語: C C++ JavaScript</li>
+                            <li>フレームワーク: React</li>
+                            <li>マークアップ言語: HTML CSS</li>
+                            <li>デザインツール: Figma</li>
+                            <li>システム管理: Docker Linux</li>
+                            <br />
+                            <li>日本語 ネイティブ</li>
+                            <li>ポルトガル語 ネイティブレベル</li>
+                            <li>英語 ビジネスレベル</li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.flexBox2}>
+                            <img src='../../public/logo.png' alt=''/>
+                    </div>
                 </>
             )
         },
         {
             // Experience
             title: 'Experience',
-            content_right: (
+            CenterText: (
                 <>
+                <div className={styles.flexBox1}>
                     <h1>Experience</h1>
                     <h2>42tokyoにおける<br />チームプロジェクト</h2>
                     <ul>
                         <li>Linuxシステム管理技術を実践したインフラ構築</li>
-                        <li>Dockerを用いたコンテナ化による効率的な<br/>デプロイメントの実現</li>
-                        <li>フロントエンド開発とデザインにおいて<br/>
-                        JavaScript、React、HTML、CSS、Figmaを活用</li>
+                        <li>Dockerを用いたコンテナ化による効率的な<br />デプロイメントの実現</li>
+                        <li>フロントエンド開発とデザインにおいて<br />
+                            JavaScript、React、HTML、CSS、Figmaを活用</li>
                     </ul>
+                </div>
+                <div className={styles.flexBox2}>
+                    <img src='../../public/MyPicture2.png' alt=''/>
+                </div>
+                </>
+            )
+        },
+        {
+            title: 'Projects',
+            CenterText: (
+                <>
+                <div className={styles.flexBox2}>
+                    <video controls className={styles.video}>
+                        <source src='/video.mp4' type='video/mp4' />
+                    </video>
+                </div>
                 </>
             )
         },
@@ -136,30 +165,8 @@ export default function Header() {
             {/* 真ん中に出す部分CenterBoxContainer */}
             <div className={`${styles.CenterBoxContainer} ${isVisible >= 0 ? styles.visible : styles.hidden}`}>
                 <div className={styles.CenterBox} ref={BoxRef}>
-                    <button className={styles.CloseButton} onClick={handleCloseButtonClick}>&times;</button>{isVisible >= 0 && menuItems[isVisible].content_right}
-                </div>
-            </div>
-
-            <div className={styles.ImageContainer}>
-                <div className={styles.imgflex}>
-                    <div className={styles.imgbox}>
-                        <img className={styles.Myimg} src='../../public/42tokyo4.jpg' />
-                    </div>
-                    <div className={styles.imgbox}>
-                        <img className={styles.Myimg} src='../../public/MyPicture2.png' />
-                    </div>
-                    <div className={styles.imgbox}>
-                        <img className={styles.Myimg} src='../../public/42tokyo2.jpg' />
-                    </div>
-                    <div className={styles.imgbox}>
-                        <img className={styles.Myimg} src='../../public/MyPicture1.jpg' />
-                    </div>
-                    <div className={styles.imgbox}>
-                        <img className={styles.Myimg} src='../../public/42Tokyo1.jpg' />
-                    </div>
-                    <div className={styles.imgbox}>
-                        <img className={styles.Myimg} src='../../public/MyPicture3.png' />
-                    </div>
+                    <button className={styles.CloseButton} onClick={handleCloseButtonClick}>&times;</button>
+                    {isVisible >= 0 && menuItems[isVisible].CenterText}
                 </div>
             </div>
         </div>

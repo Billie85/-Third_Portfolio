@@ -3,7 +3,7 @@
     top: 100vh;
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: transparent;
     color: white;
     display: flex;
     flex-direction: column;
@@ -18,35 +18,40 @@
     text-align: right;
     font-family: 'Syne';
     font-weight: 600;
-    /* text-transform: uppercase; */
     color: white;
     font-family: 'Syne';
     font-weight: 100;
     font-style: normal;
     text-transform: uppercase;
-    margin-right: 40px;
-    margin-top: 40px;
+    margin: 5%;
 }
 .Text a{
     text-decoration: none;
     color: inherit;
     margin: 10px;
+    transition: 1s ;
 }
-
+.Text a:hover {
+    background-color: white;
+    color: black;
+    transform: scaleX(1);
+    transition: 1s ;    
+}
 .ScrollDesign{
     background-color: white;
     color: black;
 }
-
 .contactText{
     flex: 1;
     display: flex;
-    justify-content: center;
     align-items: end;
+    width: 100%;
 }
 .contactText h1{
     font-family: 'Syne';
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 10vw;
+    font-size: 20vh;
+    width: 100%;
+    text-align: center;
 }

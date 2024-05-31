@@ -17,10 +17,14 @@
     flex-direction: row;
 }
 .CenterBoxContainer{
+    position: relative;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
+    width: 70%;
+    height: 70%;
 }
 .CenterBoxContainer.visible {
     opacity: 1;
@@ -31,42 +35,74 @@
     display: none;
 }
 .CenterBox {
-    position: relative;
-    width: 800px;
-    max-width: 700px;
-    height: 700px;
-    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
     border: 1px solid #ffffff;
-    text-align: center;
-    font-family: "Zen Old Mincho", serif;
-    font-style: normal;
+    background-color: black;
+}
+
+.flexBox1{
+    padding: 10px;
+    flex: 1;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
-.CenterBox h1 {
-    font-size: 4vw;
-    color: #ffffff;
+.flexBox1 h1{
+    font-size: 3vw;
     font-weight: 800;
     font-family: Syne;
     text-transform: uppercase;
     align-items: center;
 }
-.CenterBox h2 {
+.flexBox1 h2{
+    margin: 10px;
+    font-size: 1.4vw;
     align-items: center;
-    color: #ffffff;
-    font-size: 1.3vw;
+     font-family: "Zen Old Mincho", serif;
+    font-style: normal;
 }
-.CenterBox p {
-    text-align: center;
-    color: #ffffff;
-    font-size: 1.2rem;
+.flexBox1 li{
+    font-size: 1.2vw;
+    align-items: left;
+     font-family: "Zen Old Mincho", serif;
+    font-style: normal;
 }
+
+.flexBox2{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexBox2 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.video {
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
 .CloseButton{
     position: absolute;
+    padding: 2px;
     top: 0;
     right: 0;
-    font-size: 2rem;
+    font-size: 3rem;
     background-color: transparent;
     cursor: pointer;
     border: none;
@@ -76,25 +112,13 @@
 
 .ImageContainer{
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     white-space: nowrap;
-}
-.imgflex{
+    background-color: rgba(255, 255, 255, 0.416);
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-.imgbox{
-    width: 200px;
-    height: 159px;
-}
-.Myimg{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    object-position: center;
 }
 
 .MenuContainer{
@@ -112,6 +136,7 @@
     align-items: flex-end;
     text-align: right;
 }
+
 .RightTitle{
     margin: 40px;
     font-size: 5vw;
@@ -121,6 +146,13 @@
     transition: all .32s linear;
     cursor: pointer;
     white-space: nowrap;
+    transition: 1s ;    
+}
+
+.RightTitle:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    transition: 1s ;
 }
 
 
@@ -133,12 +165,34 @@
         color: white;
         background-color: rgb(0, 0, 0);
     }
-    .LeftTitle h1{
-        font-size: 2.7vw;
-        color: #FFFFFC;
+
+    .CenterBox {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ffffff;
+        background-color: black;
+    }
+
+    .flexBox1 h1{
+        font-size: 3.5vw;
         font-weight: 800;
         font-family: Syne;
         text-transform: uppercase;
-        text-align: center;
+        align-items: center;
+    }
+    .flexBox1 h2{
+        margin: 10px;
+        font-size: 2.2vw;
+        align-items: center;
+         font-family: "Zen Old Mincho", serif;
+        font-style: normal;
+    }
+    .flexBox1 li{
+        font-size: 2vw;
+        align-items: left;
+         font-family: "Zen Old Mincho", serif;
+        font-style: normal;
     }
 }

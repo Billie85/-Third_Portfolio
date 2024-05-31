@@ -127,7 +127,7 @@ export default function Header() {
                 <>
                 <div className={styles.flexBox1}>
                     <h1>Experience</h1>
-                    <h2>42tokyoにおける<br />チームプロジェクト</h2>
+                    <h2>42tokyoにおけるチームプロジェクト</h2>
                     <ul>
                         <li>Linuxシステム管理技術を実践したインフラ構築</li>
                         <li>Dockerを用いたコンテナ化による効率的な<br />デプロイメントの実現</li>

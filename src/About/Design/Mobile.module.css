@@ -6,13 +6,12 @@
 
 .container {
   color: white;
-  position: relative;
-  top: 100vh;
   height: 100vh;
   width: auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: black;
   }
   
   .MyPictureContainer {
@@ -80,5 +79,5 @@
     backdrop-filter: blur(13px);
   }
   .ArrowFont{
-    font-size: 3rem;
+    font-size: 6vw;
   }

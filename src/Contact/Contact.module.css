@@ -60,9 +60,7 @@
     .container{
         width: 100vw;
         height: 100vh;
-        top: 100vh;
-        position: relative;
-        background-color: transparent;
+        background-color: black;
         color: white;
         display: flex;
         flex-direction: column;

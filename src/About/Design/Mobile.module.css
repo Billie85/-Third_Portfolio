@@ -1,19 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aldrich:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=DotGothic16&family=Yuji+Syuku&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
-
 .container {
+  background-color: black;
   color: white;
   height: 100vh;
-  width: auto;
+  width: 100vw; /* 横幅を100vwに設定 */
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: black;
-  }
-  
+}
+
   .MyPictureContainer {
     flex: 1;
     display: flex;
@@ -21,18 +15,18 @@
     align-items: center;
     backdrop-filter: blur(13px);
     border: 1px solid #000;
-    overflow: hidden;
   }
-  .img{
-    width: 20vw;
-    height: auto;
+  .img {
+    max-width: 20vw;
+    max-height: 40vh;
+    object-fit: cover;
   }
   .MyImg{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .NameContainer {
     flex: 0.5;
     backdrop-filter: blur(13px);
@@ -41,10 +35,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    white-space: nowrap;
   }
   .NameFont{
-    margin: 2%;
+    margin: 3px;
     font-size: 4vw;
     font-family: Syne;
     text-transform: uppercase;
@@ -59,16 +52,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
   .box{
     text-align: left;
-    font-size: 2vw;
+    font-size: 2.2vw;
     font-family: "Zen Old Mincho", serif;
     font-weight: 400;
     font-style: normal;
-    margin: 5px;
+    margin: 6px;
   }
-  .TextDesign{
-    font-size: 2.4vw;
+
+  .ArrowContainer {
+    flex: 0.2;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(13px);
+  }
+  .ArrowFont{
+    font-size: 1vw;
   }

@@ -17,9 +17,9 @@ const App = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-
+  
+  
   if (windowWidth >= 150 && windowWidth <= 319) {
-    console.log(windowWidth, ": display none");
     return (
       <div>
         <img src={Gif} alt="Gif" />

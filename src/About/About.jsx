@@ -46,7 +46,6 @@ export default function About() {
 
   let v;
   if (windowWidth >= 320 && windowWidth <= 768) {
-    console.log(windowWidth,": Phone and Tablet Hello");
     v = (
       // スマートフォン
       <div className={Mobile.container}>
@@ -101,7 +100,6 @@ export default function About() {
     )
   } 
   else if (windowWidth >= 769) {
-    console.log(windowWidth,": Desktop Hello");
     v = (
       // デスクトップ
       <div className={Desktop.container} ref={ScrollAnimation}>

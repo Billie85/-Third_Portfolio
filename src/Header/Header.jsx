@@ -19,10 +19,10 @@ const Menu_Bar = ({ title, ClickHandler }) => {
                 { opacity: 0 },
                 {
                     opacity: 1,
-                    ease: 'power2.out',
+                    ease: 'power4.out',
                     scrollTrigger: {
                         trigger: titleRef.current,
-                        start: 'top 90%',
+                        start: 'top 80%',
                         end: 'bottom 20%',
                         toggleActions: "play none none reverse"
                     },
@@ -147,7 +147,7 @@ export default function Header() {
                 <>
                 <div className={styles.flexBox2}>
                     <video controls className={styles.video}>
-                        <source src={ProjectImg} type='video/mp4' />
+                        <source className={styles.InsideVideo} src={ProjectImg} type='video/mp4' />
                     </video>
                 </div>
                 </>
@@ -156,7 +156,7 @@ export default function Header() {
     ];
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${isVisible >= 0 ? styles.overlay : ''}`}>
             {menuItems.map((item, index) => (
                 <Menu_Bar
                     ClickHandler={() => { setVisible(index) }}
@@ -165,10 +165,11 @@ export default function Header() {
                     isVisible={isVisible >= 0}
                 />
             ))}
-            {/* 真ん中に出す部分CenterBoxContainer */}
             <div className={`${styles.CenterBoxContainer} ${isVisible >= 0 ? styles.visible : styles.hidden}`}>
                 <div className={styles.CenterBox} ref={BoxRef}>
-                    <button className={styles.CloseButton} onClick={handleCloseButtonClick}>&times;</button>
+                    <button className={styles.CloseButton} onClick={handleCloseButtonClick}>
+                        <span className={styles.CloseButtonIcon}>&times;</span>
+                    </button>
                     {isVisible >= 0 && menuItems[isVisible].CenterText}
                 </div>
             </div>

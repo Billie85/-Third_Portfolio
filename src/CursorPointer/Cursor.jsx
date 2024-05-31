@@ -20,8 +20,6 @@ export default function Cursor() {
         gsap.to(`.${styles.cursor}`, { x: cursorPosition.x, y: cursorPosition.y });
     }, [cursorPosition]);
 
-    console.log(cursorPosition);
-
     return (
         <div className={styles.cursor}>
             <div className={styles.cursor2}></div>

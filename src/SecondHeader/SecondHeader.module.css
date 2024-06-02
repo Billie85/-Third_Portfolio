@@ -3,14 +3,57 @@
     width: 100%;
     height: 100vh;
     background-color: black;
-}
-.videoPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .videoPart{
+    flex: 3;
     width: 100%;
     max-height: 100vh;
     object-fit: cover;
-}
+  }
+  .ArrowContainer{
+    width: 100%;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+    background-color: black;
+  }
+  .Arrow {
+    color: white;
+    font-size: 4.5vw;
+    position: relative;
+    padding: 3%;
+    animation: updownAnimation 2s infinite;
+    top: 5%;
+  }
+  .Arrow::before{
+      content: "Scroll Down";
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.7rem;
+      font-family: 'Syne';
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    
+    @keyframes updownAnimation {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-10px);
+      }
+      100% {
+          transform: translateY(0);
+      }
+    }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+  @media screen and (min-width: 320px) and (max-width: 768px) {
     .Container{
         position: relative;
         width: 100%;
@@ -24,6 +67,5 @@
         width: 100%;
         max-height: 100vh;
         object-fit: cover;
-        transform: scale(2);
     }
 }

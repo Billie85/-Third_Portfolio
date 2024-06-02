@@ -7,17 +7,43 @@ import SecondHeader from './SecondHeader/SecondHeader.jsx';
 import Contact from './Contact/Contact.jsx';
 import Gif from '/gif.webp'
 import Cursor from './CursorPointer/Cursor.jsx';
+import styles from './main.module.css';
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    const handleLoad = () => setLoading(false);
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
 
-  
+  useEffect(() => {
+    const handleResize = () => {
+      const newWindowWidth  = window.innerWidth;
+      setWindowWidth(newWindowWidth);
+      setLoading(true);
+      window.location.reload();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [])
+
+  if (loading) {
+    return (
+      <div className={styles.preloader}>
+        <div className={styles.spinner}></div>
+      </div>
+    );
+  }
   
   if (windowWidth >= 150 && windowWidth <= 319) {
     return (

@@ -45,9 +45,8 @@
     justify-content: center;
     border: 1px solid #ffffff;
     background-color: black;
-    width: 80vw;
-    height: 400px;
-    padding: auto;
+    width: 65vw;
+    height: 55vh;
 }
 
 .flexBox1{
@@ -60,7 +59,8 @@
     align-items: center;
 }
 .flexBox1 h1{
-    font-size: 3vw;
+    padding: 5px;
+    font-size: 2.5vw;
     font-weight: 800;
     font-family: Syne;
     text-transform: uppercase;

@@ -102,11 +102,11 @@ export default function Header() {
                         <h1>Skills</h1>
                         <h2>エンジニアリング</h2>
                         <ul>
-                            <li>プログラミング言語: C C++ JavaScript</li>
+                            <li>プログラミング言語: C、C++、JavaScript</li>
                             <li>フレームワーク: React</li>
-                            <li>マークアップ言語: HTML CSS</li>
+                            <li>マークアップ言語: HTML、CSS</li>
                             <li>デザインツール: Figma</li>
-                            <li>システム管理: Docker Linux</li>
+                            <li>システム管理: Docker、Linux</li>
                             <br />
                             <li>日本語 ネイティブ</li>
                             <li>ポルトガル語 ネイティブレベル</li>
@@ -129,7 +129,6 @@ export default function Header() {
                     <h1>Experience</h1>
                     <h2>42tokyoにおけるチームプロジェクト</h2>
                     <ul>
-                        <li>Linuxシステム管理技術を実践したインフラ構築</li>
                         <li>Dockerを用いたコンテナ化による効率的な<br />デプロイメントの実現</li>
                         <li>フロントエンド開発とデザインにおいて<br />
                             JavaScript、React、HTML、CSS、Figmaを活用</li>

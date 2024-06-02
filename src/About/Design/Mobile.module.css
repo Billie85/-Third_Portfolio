@@ -61,13 +61,3 @@
     font-style: normal;
     margin: 6px;
   }
-
-  .ArrowContainer {
-    flex: 0.2;
-    display: flex;
-    justify-content: center;
-    backdrop-filter: blur(13px);
-  }
-  .ArrowFont{
-    font-size: 1vw;
-  }

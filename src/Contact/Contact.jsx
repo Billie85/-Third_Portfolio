@@ -6,24 +6,22 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
-    const Text = useRef(null);
+    const ContactText = useRef(null);
 
     useEffect(() => {
-        gsap.to(
-            Text.current,
-            {
-                opacity: 1,
-                duration: 3,
-                ease: 'power1.out',
-                startOpacity: 0,
-                scrollTrigger: {
-                    trigger: Text.current,
-                    start: 'top 80%',
-                    toggleActions: "play none none reverse"
-                },
-            }
-        )
-    }, [])
+        gsap.to(ContactText.current, {
+          y: -20,
+          duration: 1,
+          ease: "power2.inOut",
+          scrollTrigger: {
+            trigger: ContactText.current,
+            start: "top 90%",
+            end: "bottom 25%",
+            toggleActions: 'play none none reverse'
+          },
+          opacity: 1,
+        })
+      }, [])
 
     return (
         <div className={styles.container}>
@@ -32,9 +30,8 @@ export default function Contact() {
                 <a href='https://github.com/Billie85'>GitHub</a>
                 <a href='https://42tokyo.jp/'>42Tokyo</a>
             </div>
-            <div className={styles.contactText} >
-                <h1 ref={Text} style={{ opacity: 0 }}>Contact</h1>
-            </div>
+            <div className={styles.contactText}>
+            <h1 ref={ContactText} style={{ opacity: 0 }}>Contact</h1></div>
         </div>
-    )
+    );
 }

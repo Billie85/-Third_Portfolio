@@ -101,3 +101,46 @@
     left: 63%;
     transform: translateX(-50%);
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      width: 100vw;
+      top: 0;
+      background-color: black;
+      color: white;
+  }
+
+  .MyPictureContainer,
+  .NameContainer,
+  .hogeContainer,
+  .IntroduceContainer,
+  .ArrowContainer {
+      grid-column: 1 / -1;
+      grid-row: auto;
+  }
+
+  .MyPictureContainer {
+      height: 20vh;
+  }
+
+  .NameFont {
+      font-size: 2rem;
+  }
+
+  .IntroduceContainer {
+      flex-direction: column;
+  }
+
+  .box,
+  .TextDesign {
+      font-size: 1.9vh;
+  }
+
+  .ArrowFont {
+    display: none;
+  }
+}

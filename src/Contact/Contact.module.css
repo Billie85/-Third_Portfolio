@@ -57,62 +57,27 @@
     text-align: center;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
 
+@media screen and (max-width: 768px) {
     .container{
-        width: 100vw;
-        height: 100vh;
         background-color: black;
         color: white;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
     }
+
     .Text {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: right;
-        align-items: flex-end;
-        text-align: right;
-        font-family: 'Syne';
-        font-weight: 600;
-        color: white;
-        font-family: 'Syne';
-        font-weight: 100;
-        font-style: normal;
-        text-transform: uppercase;
-        margin: 5%;
-    }
-    .Text a{
-        text-decoration: none;
-        color: inherit;
-        margin: 10px;
-        transition: 1s ;
-    }
-    .Text a:hover {
-        background-color: white;
-        color: black;
-        transform: scaleX(1);
-        transition: 1s ;    
-    }
-    .ScrollDesign{
-        background-color: white;
-        color: black;
-    }
-    .contactText{
-        flex: 1;
-        display: flex;
-        align-items: end;
-        width: 100%;
-    }
-    .contactText h1{
-        margin-bottom: 5%;
-        font-family: 'Syne';
-        font-weight: 800;
-        text-transform: uppercase;
-        font-size: 6.5vh;
-        width: 100%;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+        margin: 10% 5%;
     }
+
+    .Text a {
+        font-size: 16px;
+        margin: 10px;
+    }
+
+    .contactText h1 {
+        font-size: 10vh;
+    }
+    
 }

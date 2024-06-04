@@ -23,8 +23,8 @@ export default function About() {
       scrollTrigger: {
         trigger: cont,
         start: 'top top',
-        end: () => `+=${totalWidth - window.innerWidth + 800}`,
-        scrub: 1,
+        end: () => `+=${totalWidth - window.innerWidth}`,
+        scrub: 1.5,
         pin: true,
         invalidateOnRefresh: true,
       },

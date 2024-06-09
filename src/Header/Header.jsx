@@ -6,34 +6,41 @@ import EducationImg from '/42Tokyo1.jpg'
 import SkillImg from '/logo.png'
 import ExperienceImg from '/MyPicture2.png'
 import ProjectImg from '/video.mp4'
+import PropTypes from 'prop-types';
 gsap.registerPlugin(ScrollTrigger);
 
 const Menu_Bar = ({ title, ClickHandler }) => {
 
+    Menu_Bar.propTypes = {
+        title: PropTypes.string.isRequired,
+        ClickHandler: PropTypes.func.isRequired,
+      };
+
     // Title Animation
-    const titleRef = useRef(null);
-    useEffect(() => {
-        if (titleRef.current) {
-            gsap.fromTo(
-                titleRef.current,
-                { opacity: 0 },
-                {
-                    opacity: 1,
-                    ease: 'power4.out',
-                    scrollTrigger: {
-                        trigger: titleRef.current,
-                        start: 'top 80%',
-                        end: 'bottom 20%',
-                        toggleActions: "play none none reverse"
-                    },
-                }
-            )
-        }
-    }, []);
+    // const titleRef = useRef(null);
+    // useEffect(() => {
+    //     if (titleRef.current) {
+    //         gsap.fromTo(
+    //             titleRef.current,
+    //             { opacity: 0 },
+    //             {
+    //                 opacity: 1,
+    //                 ease: 'power4.out',
+    //                 scrollTrigger: {
+    //                     trigger: titleRef.current,
+    //                     start: 'top 80%',
+    //                     end: 'bottom 20%',
+    //                     toggleActions: "play none none reverse"
+    //                 },
+    //             }
+    //         )
+    //     }
+    // }, []);
     return (
         <div className={styles.MenuContainer} onClick={ClickHandler}>
             <div className={styles.right}>
-                <span className={styles.RightTitle} ref={titleRef}>{title}</span>
+                {/* <span className={styles.RightTitle} ref={titleRef}>{title}</span> */}
+                <span className={styles.RightTitle} >{title}</span>
             </div>
         </div>
     );
@@ -46,27 +53,27 @@ export default function Header() {
         setVisible(-1);
     };
 
-    //   Box Animation
-    const BoxRef = useRef(null);
-    useEffect(() => {
-        if (BoxRef.current && isVisible >= 0) {
-            gsap.fromTo(
-                BoxRef.current,
-                {
-                    opacity: 0,
-                    scale: 0.5,
-                    y: 100,
-                },
-                {
-                    opacity: 1,
-                    scale: 1,
-                    y: 0,
-                    ease: "circ.inOut",
-                    duration: 0.8,
-                }
-            );
-        }
-    }, [isVisible]);
+    //Box Animation
+    // const BoxRef = useRef(null);
+    // useEffect(() => {
+    //     if (BoxRef.current && isVisible >= 0) {
+    //         gsap.fromTo(
+    //             BoxRef.current,
+    //             {
+    //                 opacity: 0,
+    //                 scale: 0.5,
+    //                 y: 100,
+    //             },
+    //             {
+    //                 opacity: 1,
+    //                 scale: 1,
+    //                 y: 0,
+    //                 ease: "circ.inOut",
+    //                 duration: 0.8,
+    //             }
+    //         );
+    //     }
+    // }, [isVisible]);
 
     const menuItems = [
         {
@@ -165,7 +172,7 @@ export default function Header() {
                 />
             ))}
             <div className={`${styles.CenterBoxContainer} ${isVisible >= 0 ? styles.visible : styles.hidden}`}>
-                <div className={styles.CenterBox} ref={BoxRef}>
+                <div className={styles.CenterBox}>
                     <button className={styles.CloseButton} onClick={handleCloseButtonClick}>
                         <span className={styles.CloseButtonIcon}>&times;</span>
                     </button>

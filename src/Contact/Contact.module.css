@@ -1,13 +1,13 @@
 .container{
-    position: relative;
-    top: 100vh;
+    top: 300vh;
+    position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
     color: white;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background-color: black;
 }
 .Text {
     flex: 1;
@@ -53,13 +53,13 @@
     font-family: 'Syne';
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 20vh;
+    font-size: 13vh;
     width: 100%;
     text-align: center;
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .container{
         background-color: black;
         color: white;
@@ -78,7 +78,8 @@
     }
 
     .contactText h1 {
-        font-size: 10vh;
+        font-size: 3vh;
+        margin-bottom: 20%;
     }
     
 }

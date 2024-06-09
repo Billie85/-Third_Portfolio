@@ -1,12 +1,12 @@
-import styles from './SecondHeader.module.css';
+import styles from './WelcomePage.module.css';
 import gifImage from '/twoBand.mp4';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import React, { useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SecondHeader() {
+export default function WelcomePage() {
   const Arrow = useRef(null);
   useEffect(() => {
     gsap.to(Arrow.current, {

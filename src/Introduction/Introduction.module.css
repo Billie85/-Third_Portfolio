@@ -1,9 +1,9 @@
 .container {
+    top: 100vh;
+    position: absolute;
     color: whitesmoke;
-    position: relative;
     height: 100vh;
     width: 100vw;
-    top: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,6 +71,7 @@
     font-size: 1.3vw;
     margin: 10px;
   }
+
 
 @media screen and (max-width: 767px) {
   .container {

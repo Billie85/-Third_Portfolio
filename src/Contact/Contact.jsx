@@ -17,7 +17,7 @@ export default function Contact() {
             trigger: ContactText.current,
             start: "top 90%",
             end: "bottom 25%",
-            toggleActions: 'play none none reverse'
+            toggleActions: 'play none none reverse',
           },
           opacity: 1,
         })
@@ -26,9 +26,9 @@ export default function Contact() {
     return (
         <div className={styles.container}>
             <div className={styles.Text}>
-                <a href='https://www.instagram.com/styles.hello?igsh=N2hhbmJ1dzJzbHJ6&utm_source=qr'>Instagram</a>
-                <a href='https://github.com/Billie85'>GitHub</a>
-                <a href='https://42tokyo.jp/'>42Tokyo</a>
+                <a href='https://www.instagram.com/styles.hello?igsh=N2hhbmJ1dzJzbHJ6&utm_source=qr' target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href='https://github.com/Billie85' target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href='https://42tokyo.jp/' target="_blank" rel="noopener noreferrer">42Tokyo</a>
             </div>
             <div className={styles.contactText}>
             <h1 ref={ContactText} style={{ opacity: 0 }}>Contact</h1></div>

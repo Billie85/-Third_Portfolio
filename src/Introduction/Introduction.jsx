@@ -1,7 +1,7 @@
-import Desktop from './Design/Desktop.module.css';
+import Desktop from './Introduction.module.css';
 import MyPicture from '/MyPicture.png';
-export default function About() {
-  
+
+export default function Introduction() {
   return (
     <>
       <div className={Desktop.container}>

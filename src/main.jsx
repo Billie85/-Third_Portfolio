@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Header from './Header/Header.jsx';
-import About from './About/About.jsx';
-import SecondHeader from './SecondHeader/SecondHeader.jsx';
+import AboutMe from './AboutMe/AboutMe.jsx';
+import Introduction from './Introduction/Introduction.jsx';
+import WelcomePage from './WelcomePage/WelcomePage.jsx';
 import Contact from './Contact/Contact.jsx';
-import Gif from '/gif.webp';
 import Cursor from './CursorPointer/Cursor.jsx';
 
 const App = () => {
@@ -13,9 +11,9 @@ const App = () => {
   return (
     <>
       <Cursor />
-      <SecondHeader />
-      <About />
-      <Header />
+      <WelcomePage />
+      <Introduction />
+      <AboutMe />
       <Contact />
     </>
   );

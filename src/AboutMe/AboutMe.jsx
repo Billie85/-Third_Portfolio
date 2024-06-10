@@ -128,7 +128,7 @@ export default function AboutMe() {
                     <ul>
                         <li>Dockerを用いた環境構築</li>
                         <li>フロントエンド開発とデザインにおいて<br />
-                            JavaScript、React、HTML、CSS、Figmaを活用</li>
+                        JavaScript、React、HTML、CSS、Figmaを活用</li>
                     </ul>
                 </div>
                 <div className={styles.flexBox2}>
@@ -143,7 +143,7 @@ export default function AboutMe() {
                 <>
                 <div className={styles.flexBox1}>
                     <h1>Project</h1>
-                    <h2>42tokyoのチーム課題</h2>
+                    <h2>42Tokyoのチーム課題</h2>
                     <ul>
                         <li>この課題は、Pong gameと呼ばれる<br />
                             ゲームをプレイヤー同士でプレイできるフルスタックWebサイトです。</li>
@@ -173,7 +173,7 @@ export default function AboutMe() {
             ))}
             <div className={`${styles.CenterBoxContainer} ${isVisible >= 0 ? styles.visible : styles.hidden}`}>
                 <div className={styles.CenterBox} ref={BoxRef}>
-                    <button className={styles.CloseButton}>
+                    <button className={styles.CloseButton} >
                         <span className={styles.CloseButtonIcon} onClick={handleCloseButtonClick}>&times;</span>
                     </button>
                     {isVisible >= 0 && menuItems[isVisible].CenterText}

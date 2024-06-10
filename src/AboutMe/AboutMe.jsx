@@ -31,8 +31,8 @@ const Menu_Bar = ({ title, ClickHandler }) => {
         }
     }, []);
     return (
-        <div className={styles.MenuContainer} onClick={ClickHandler}>
-            <div className={styles.right}>
+        <div className={styles.MenuContainer}>
+            <div className={styles.right} onClick={ClickHandler}>
                 <span className={styles.RightTitle} ref={titleRef}>{title}</span>
             </div>
         </div>
@@ -80,8 +80,6 @@ export default function AboutMe() {
                     <ul>
                         <li>C言語を中心としたプログラミング学習</li>
                         <li>コンピュータグラフィックアルゴリズムの理解と実践</li>
-                        <li>Linuxシステム管理とセキュリティに関する習得</li>
-                        <li>マルチスレッドプログラミングの技術習得</li>
                         <li>Dockerを用いたコンテナ管理のスキル取得</li>
                         <li>チームweb開発を通じてフロントエンドデザインの習得</li>
                     </ul>
@@ -128,7 +126,7 @@ export default function AboutMe() {
                     <h1>Experience</h1>
                     <h2>42tokyoにおけるチームプロジェクト</h2>
                     <ul>
-                        <li>Dockerを用いたコンテナ化による効率的な<br />デプロイメントの実現</li>
+                        <li>Dockerを用いた環境構築</li>
                         <li>フロントエンド開発とデザインにおいて<br />
                             JavaScript、React、HTML、CSS、Figmaを活用</li>
                     </ul>
@@ -147,8 +145,10 @@ export default function AboutMe() {
                     <h1>Project</h1>
                     <h2>42tokyoのチーム課題</h2>
                     <ul>
-                        <li>この課題は、Pong gameと呼ばれるゲームをプレイヤー同士でプレイできるフルスタックWebサイトです。</li>
-                        <li>チャット機能、招待機能、画像設定機能、ゲームモード選択機能など、様々な機能が備わっています。</li>
+                        <li>この課題は、Pong gameと呼ばれる<br />
+                            ゲームをプレイヤー同士でプレイできるフルスタックWebサイトです。</li>
+                        <li>チャット機能、招待機能、画像設定機能、<br />
+                            ゲームモード選択機能など、様々な機能が備わっています。</li>
                     </ul>
                 </div>
                 <div className={styles.flexBox2}>
@@ -173,8 +173,8 @@ export default function AboutMe() {
             ))}
             <div className={`${styles.CenterBoxContainer} ${isVisible >= 0 ? styles.visible : styles.hidden}`}>
                 <div className={styles.CenterBox} ref={BoxRef}>
-                    <button className={styles.CloseButton} onClick={handleCloseButtonClick}>
-                        <span className={styles.CloseButtonIcon}>&times;</span>
+                    <button className={styles.CloseButton}>
+                        <span className={styles.CloseButtonIcon} onClick={handleCloseButtonClick}>&times;</span>
                     </button>
                     {isVisible >= 0 && menuItems[isVisible].CenterText}
                 </div>

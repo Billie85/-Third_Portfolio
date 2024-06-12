@@ -2,7 +2,7 @@ import styles from './WelcomePage.module.css';
 import gifImage from '/twoBand.mp4';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +19,6 @@ export default function WelcomePage() {
       opacity: 0
     })
   })
-  
   return (
     <div className={styles.Container}>
       <video className={styles.videoPart} autoPlay loop muted playsInline>

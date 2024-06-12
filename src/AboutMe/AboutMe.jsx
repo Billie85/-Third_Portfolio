@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './AboutMe.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -31,8 +31,8 @@ const Menu_Bar = ({ title, ClickHandler }) => {
         }
     }, []);
     return (
-        <div className={styles.MenuContainer}>
-            <div className={styles.right} onClick={ClickHandler}>
+        <div className={styles.MenuContainer} onClick={ClickHandler}>
+            <div className={styles.right}>
                 <span className={styles.RightTitle} ref={titleRef}>{title}</span>
             </div>
         </div>
@@ -44,10 +44,10 @@ export default function AboutMe() {
     const [isVisible, setVisible] = useState(-1);
     const handleCloseButtonClick = () => {
         setVisible(-1);
-    };
-
-    // Box Animation
-    const BoxRef = useRef(null);
+        };
+        
+        // Box Animation
+        const BoxRef = useRef(null);
     useEffect(() => {
         if (BoxRef.current && isVisible >= 0) {
             gsap.fromTo(
@@ -160,12 +160,12 @@ export default function AboutMe() {
             )
         },
     ];
-
+    
     return (
         <div className={`${styles.container} ${isVisible >= 0 ? styles.overlay : ''}`}>
             {menuItems.map((item, index) => (
                 <Menu_Bar
-                    ClickHandler={() => { setVisible(index) }}
+                    ClickHandler={() => { console.log("クリックされました!!!!!!!!!!!!"); setVisible(index) }}
                     key={index}
                     title={item.title}
                     isVisible={isVisible >= 0}
@@ -173,10 +173,13 @@ export default function AboutMe() {
             ))}
             <div className={`${styles.CenterBoxContainer} ${isVisible >= 0 ? styles.visible : styles.hidden}`}>
                 <div className={styles.CenterBox} ref={BoxRef}>
-                    <button className={styles.CloseButton} >
-                        <span className={styles.CloseButtonIcon} onClick={handleCloseButtonClick}>&times;</span>
-                    </button>
-                    {isVisible >= 0 && menuItems[isVisible].CenterText}
+                    {isVisible >= 0 && 
+                    <>
+                        <button className={styles.CloseButton} onClick={handleCloseButtonClick}>
+                            <span className={styles.CloseButtonIcon}>&times;</span>
+                        </button>
+                        {menuItems[isVisible].CenterText}
+                    </>}
                 </div>
             </div>
         </div>

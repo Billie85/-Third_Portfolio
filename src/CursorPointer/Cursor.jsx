@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Cursor.module.css';
 
 export default function Cursor() {
@@ -7,7 +7,7 @@ export default function Cursor() {
 
     useEffect(() => {
         const handleMouseMove = (e) => {
-            setCursorPosition({ x: e.clientX, y: e.clientY });
+            setCursorPosition({ x: e.clientX + 10, y: e.clientY + 10 });
         };
 
         window.addEventListener('mousemove', handleMouseMove);

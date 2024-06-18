@@ -22,13 +22,17 @@
     padding: 0 4%;
   }
   .img {
-    width: 70%;
+    width: 80%;
+    max-width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
   }
   .MyImg {
+    width: 100%;
+    height: auto;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -45,98 +49,81 @@
     padding: 0 4%;
   }
   .IntroduceContainer h1{
-    text-align: center;
-    font-size: 2vw;
-    font-family: 'Syne';
-    font-weight: 600;
-    color: white;
-    font-family: 'Syne';
-    font-style: normal;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-  }
-  .IntroduceContainer p{
-    text-align: left;
-    font-size: 1.1vw;
-    font-family: "Zen Old Mincho", serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 5px;
-  }
-  .IntroduceContainer span{
-    font-family: "Zen Old Mincho", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    font-size: 1.3vw;
-    margin: 10px;
-  }
-
-
-@media screen and (max-width: 767px) {
-  .container {
-    position: unset;
-    flex-direction: column;
-    background-color: black;
-  }
-
-  .MyPictureContainer {
-    flex: 1;
-    width: 100%;
-    height: 100%;
+    flex: 0.5;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    font-family: "Shippori Mincho", serif;
+    font-style: normal;
+  }
+
+  .IntroduceContainer p {
+    flex: 4;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+    font-family: "Zen Old Mincho", serif;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
     padding: 0 4%;
-  }
-  .img {
-    width: 40%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .MyImg {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    object-position: center;
-  }
-   
-  .IntroduceContainer {
-    flex: 1.5;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 2%;
-  }
-  .IntroduceContainer h1{
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: 'Syne';
-    font-weight: 600;
-    color: white;
-    font-family: 'Syne';
-    font-style: normal;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .IntroduceContainer p{
-    text-align: left;
-    font-size: 0.5rem;
-    font-family: "Zen Old Mincho", serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 0 1%;
-  }
-  .IntroduceContainer span{
-    font-family: "Zen Old Mincho", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    font-size: 0.7rem;
-  }
+}
+
+
+  @media screen and (max-width: 767px) {
+    .container {
+        position: unset;
+        flex-direction: column;
+        background-color: black;
+    }
+
+    .MyPictureContainer {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 4%;
+    }
+
+    .img {
+        width: 40%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* opacity: 0; */
+
+    }
+
+    .MyImg {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .IntroduceContainer {
+        flex: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .IntroduceContainer h1 {
+      font-size: 1.4rem;
+    }
+
+    .IntroduceContainer p {
+      font-size: 0.6rem;
+      line-height: 2.8;
+    }
 }

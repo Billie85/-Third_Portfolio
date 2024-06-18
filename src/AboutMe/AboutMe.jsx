@@ -76,13 +76,13 @@ export default function AboutMe() {
                 <>
                  <div className={styles.flexBox1}>
                     <h1>Education</h1>
-                    <h2>42tokyo エンジニアリングスクール2年半在籍</h2>
-                    <ul>
-                        <li>C言語を中心としたプログラミング学習</li>
-                        <li>コンピュータグラフィックアルゴリズムの理解と実践</li>
-                        <li>Dockerを用いたコンテナ管理のスキル取得</li>
-                        <li>チームweb開発を通じてフロントエンドデザインの習得</li>
-                    </ul>
+                    <h2>42tokyo エンジニアリング<br/>スクール2年半在籍</h2>
+                    <p>
+                        C言語を中心としたプログラミング学習 <br/>
+                        コンピュータグラフィックアルゴリズムの理解と実践 <br/>
+                        Dockerを用いたコンテナ管理のスキル取得 <br/>
+                        チームweb開発を通じてフロントエンドデザインの習得 <br/>
+                    </p>
                  </div>
 
                 <div className={styles.flexBox2}>
@@ -99,16 +99,16 @@ export default function AboutMe() {
                     <div className={styles.flexBox1}>
                         <h1>Skills</h1>
                         <h2>エンジニアリング</h2>
-                        <ul>
-                            <li>プログラミング言語: C、C++、JavaScript</li>
-                            <li>フレームワーク: React</li>
-                            <li>マークアップ言語: HTML、CSS</li>
-                            <li>デザインツール: Figma</li>
-                            <li>システム管理: Docker、Linux</li>
-                            <li>日本語 ネイティブ</li>
-                            <li>ポルトガル語 ネイティブレベル</li>
-                            <li>英語 ビジネスレベル</li>
-                        </ul>
+                        <p>
+                            プログラミング言語: C、C++、JavaScript<br />
+                            フレームワーク: React <br />
+                            マークアップ言語: HTML、CSS <br />
+                            デザインツール: Figma <br />
+                            システム管理: Docker、Linux <br />
+                            日本語 ネイティブ <br />
+                            ポルトガル語 ネイティブレベル <br />
+                            英語 ビジネスレベル <br />
+                        </p>
                     </div>
 
                     <div className={styles.flexBox2}>
@@ -124,12 +124,12 @@ export default function AboutMe() {
                 <>
                 <div className={styles.flexBox1}>
                     <h1>Experience</h1>
-                    <h2>42tokyoにおけるチームプロジェクト</h2>
-                    <ul>
-                        <li>Dockerを用いた環境構築</li>
-                        <li>フロントエンド開発とデザインにおいて<br />
-                        JavaScript、React、HTML、CSS、Figmaを活用</li>
-                    </ul>
+                    <h2>42tokyoにおける<br/>チームプロジェクト</h2>
+                    <p>
+                        Dockerを用いた環境構築 <br/>
+                        フロントエンド開発とデザインにおいて
+                        JavaScript、React、HTML、CSS、Figmaを活用 <br/>
+                    </p>
                 </div>
                 <div className={styles.flexBox2}>
                     <img src={ExperienceImg} alt=''/>
@@ -144,12 +144,12 @@ export default function AboutMe() {
                 <div className={styles.flexBox1}>
                     <h1>Project</h1>
                     <h2>42Tokyoのチーム課題</h2>
-                    <ul>
-                        <li>この課題は、Pong gameと呼ばれる<br />
-                            ゲームをプレイヤー同士でプレイできるフルスタックWebサイトです。</li>
-                        <li>チャット機能、招待機能、画像設定機能、<br />
-                            ゲームモード選択機能など、様々な機能が備わっています。</li>
-                    </ul>
+                    <p>
+                        この課題は、Pong gameと呼ばれる<br />
+                        ゲームをプレイヤー同士でプレイできるフルスタックWebサイトです。<br />
+                        チャット機能、招待機能、画像設定機能、<br />
+                        ゲームモード選択機能など、様々な機能が備わっています。<br/>
+                    </p>
                 </div>
                 <div className={styles.flexBox2}>
                     <video controls className={styles.video}>
@@ -165,7 +165,7 @@ export default function AboutMe() {
         <div className={`${styles.container} ${isVisible >= 0 ? styles.overlay : ''}`}>
             {menuItems.map((item, index) => (
                 <Menu_Bar
-                    ClickHandler={() => { console.log("クリックされました!!!!!!!!!!!!"); setVisible(index) }}
+                    ClickHandler={() => { setVisible(index) }}
                     key={index}
                     title={item.title}
                     isVisible={isVisible >= 0}

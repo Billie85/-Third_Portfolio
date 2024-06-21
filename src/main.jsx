@@ -5,6 +5,7 @@ import Introduction from './Introduction/Introduction.jsx';
 import WelcomePage from './WelcomePage/WelcomePage.jsx';
 import Contact from './Contact/Contact.jsx';
 import Cursor from './CursorPointer/Cursor.jsx';
+import Personality from './Personality/Personality.jsx';
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
     <>
       <Cursor />
       <WelcomePage />
+      <Personality />
       <Introduction />
       <AboutMe />
       <Contact />

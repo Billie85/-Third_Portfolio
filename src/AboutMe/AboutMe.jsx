@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './AboutMe.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import EducationImg from '/42Tokyo1.jpg'
-import SkillImg from '/logo.png'
-import ExperienceImg from '/MyPicture2.png'
+// import EducationImg from '/42Tokyo1.jpg'
+// import SkillImg from '/logo.png'
+// import ExperienceImg from '/MyPicture2.png'
 import ProjectImg from '/video.mp4'
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,85 +70,16 @@ export default function AboutMe() {
 
     const menuItems = [
         {
-            // Education
-            title: 'Education',
-            CenterText: (
-                <>
-                 <div className={styles.flexBox1}>
-                    <h1>Education</h1>
-                    <h2>42tokyo エンジニアリング<br/>スクール2年半在籍</h2>
-                    <p>
-                        C言語を中心としたプログラミング学習 <br/>
-                        コンピュータグラフィックアルゴリズムの理解と実践 <br/>
-                        Dockerを用いたコンテナ管理のスキル取得 <br/>
-                        チームweb開発を通じてフロントエンドデザインの習得 <br/>
-                    </p>
-                 </div>
-
-                <div className={styles.flexBox2}>
-                    <img src={EducationImg} alt=''/>
-                </div>
-                </>
-            )
-        },
-        {
-            // Skill
-            title: 'Skills',
-            CenterText: (
-                <>
-                    <div className={styles.flexBox1}>
-                        <h1>Skills</h1>
-                        <h2>エンジニアリング</h2>
-                        <p>
-                            プログラミング言語: C、C++、JavaScript<br />
-                            フレームワーク: React <br />
-                            マークアップ言語: HTML、CSS <br />
-                            デザインツール: Figma <br />
-                            システム管理: Docker、Linux <br />
-                            日本語 ネイティブ <br />
-                            ポルトガル語 ネイティブレベル <br />
-                            英語 ビジネスレベル <br />
-                        </p>
-                    </div>
-
-                    <div className={styles.flexBox2}>
-                        <img src={SkillImg} alt=''/>
-                    </div>
-                </>
-            )
-        },
-        {
-            // Experience
-            title: 'Experience',
+            // Transcendence
+            title: 'Transcendence',
             CenterText: (
                 <>
                 <div className={styles.flexBox1}>
-                    <h1>Experience</h1>
-                    <h2>42tokyoにおける<br/>チームプロジェクト</h2>
+                    <h1>Transcendence</h1>
                     <p>
-                        Dockerを用いた環境構築 <br/>
-                        フロントエンド開発とデザインにおいて
-                        JavaScript、React、HTML、CSS、Figmaを活用 <br/>
-                    </p>
-                </div>
-                <div className={styles.flexBox2}>
-                    <img src={ExperienceImg} alt=''/>
-                </div>
-                </>
-            )
-        },
-        {
-            title: 'Projects',
-            CenterText: (
-                <>
-                <div className={styles.flexBox1}>
-                    <h1>Project</h1>
-                    <h2>42Tokyoのチーム課題</h2>
-                    <p>
-                        この課題は、Pong gameと呼ばれる<br />
-                        ゲームをプレイヤー同士でプレイできるフルスタックWebサイトです。<br />
-                        チャット機能、招待機能、画像設定機能、<br />
-                        ゲームモード選択機能など、様々な機能が備わっています。<br/>
+                        Pongゲームをプレイヤー同士でプレイできるフルスタックWebサイトを構築しました。
+                        チャット機能、招待機能、画像設定機能、ゲームモード選択機能などを備えており、
+                        私はCSS、HTML、Figmaを使ってデザインを担当しました。
                     </p>
                 </div>
                 <div className={styles.flexBox2}>

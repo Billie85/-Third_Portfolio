@@ -1,21 +1,28 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import AboutMe from './AboutMe/AboutMe.jsx';
-import Introduction from './Introduction/Introduction.jsx';
-import WelcomePage from './WelcomePage/WelcomePage.jsx';
-import Contact from './Contact/Contact.jsx';
 import Cursor from './CursorPointer/Cursor.jsx';
-import Personality from './Personality/Personality.jsx';
+import WelcomePage from './WelcomePage/WelcomePage.jsx';
+import Tokyo42 from './Introduction/Tokyo42.jsx';
+import Strengths from './Introduction/Strengths.jsx'
+import Personality from './Introduction/Personality.jsx';
+import Goal from './Introduction/Goal.jsx';
+import Contact from './Contact/Contact.jsx';
+import Project from './Project/Project.jsx';
+import Message from './Introduction/Message.jsx';
+
 
 const App = () => {
-
   return (
     <>
       <Cursor />
       <WelcomePage />
-      <Personality />
-      <Introduction />
-      <AboutMe />
+
+      <Tokyo42/>
+      <Strengths/>
+      <Personality/>
+      <Goal/>
+      <Message />
+      <Project/>
       <Contact />
     </>
   );

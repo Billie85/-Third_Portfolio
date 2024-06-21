@@ -46,7 +46,7 @@ export default function WelcomePage() {
         trigger: Delete.current,
         start: 'tpp top',
         end: 'bottom bottom',
-        toggleActions: 'play none none reverse'
+        toggleActions: 'play none none reverse',
       },
       opacity: 0
     })
@@ -55,8 +55,8 @@ export default function WelcomePage() {
   return (
     <div className={styles.Container}>
         <div ref={Delete} className={styles.Font}>
-          <h1 ref={text1}>特技 Web開発</h1>
-          <h1 ref={text2}>趣味 Web開発</h1>
+          <h1 ref={text1}>特技 Web制作</h1>
+          <h1 ref={text2}>趣味 Web制作</h1>
         </div>
       <video ref={video} className={styles.videoPart} autoPlay loop muted playsInline>
         <source src={gifImage} type="video/mp4" />

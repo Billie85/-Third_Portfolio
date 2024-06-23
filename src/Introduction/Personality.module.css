@@ -7,6 +7,27 @@
     flex-direction: row;
     backdrop-filter: blur(14px);
   }
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    font-family: "Shippori Mincho", serif;
+    font-style: normal;
+    /* background-color
+    : red; */
+    padding: 0 4%;
+    
+  }
+  .textContainer a{
+    padding: 0 4%;
+    text-decoration: none;
+    color: inherit;
+    padding: 0 4%;
+    text-align: right;
+    letter-spacing: 0.04em;
+    line-height: 3;
+  }
   .MyPictureContainer {
     flex: 1;
     width: 100%;
@@ -30,6 +51,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 4%;
+    /* background-color: pink; */
   }
   .IntroduceContainer h1{
     flex: 0.5;

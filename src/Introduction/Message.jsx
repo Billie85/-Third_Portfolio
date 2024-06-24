@@ -39,7 +39,7 @@ export default function Message() {
             <img ref={imgRef} src={picture} alt='logo img'/>
         </div>
         <div className={Desktop.IntroduceContainer}>
-          <h1>課題</h1>
+          <h1>今までのプロジェクト</h1>
              <p>
                 42Tokyoでの学びを通じて、私は多様なプロジェクトに取り組んできました。<br/>
                 特に、下にある動画では、Transcendenceプロジェクトで3人のチームでPongゲームをプレイヤー同士でプレイできるフルスタックWebサイトを構築し、

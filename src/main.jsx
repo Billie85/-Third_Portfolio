@@ -8,7 +8,8 @@ import Personality from './Introduction/Personality.jsx';
 import Goal from './Introduction/Goal.jsx';
 import Project from './Project/Project.jsx';
 import Message from './Introduction/Message.jsx';
-import Contact from './Introduction/Contact.jsx';
+// import Contact from './Introduction/Contact.jsx';
+import Contact from './Contact/Contact.jsx';
 
 
 const App = () => {
